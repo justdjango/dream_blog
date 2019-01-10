@@ -1,0 +1,34 @@
+===================================================================
+Plugins Used
+===================================================================
+https://github.com/blivesta/animsition
+Nice scroll - http://manos.malihu.gr/jquery-custom-content-scroller/
+http://fancyapps.com/fancybox/3/docs/
+
+
+===================================================================
+Custom icon font
+===================================================================
+SVGs Origin - http://www.flaticon.com
+Then converted to icon font in http://app.fontastic.me
+See the icons in icons/reference directory.
+
+
+===================================================================
+Photos
+===================================================================
+https://www.pexels.com/photo/stone-pebbles-504375/
+https://www.pexels.com/photo/books-magazines-building-school-478930/
+https://www.pexels.com/photo/adult-bar-cafe-city-employee-240223/
+https://www.pexels.com/photo/adult-arrival-beard-boss-429248/
+https://www.pexels.com/photo/construction-wall-house-door-64609/
+https://www.pexels.com/photo/man-working-in-office-488366/
+https://www.pexels.com/photo/person-counting-money-with-smartphones-in-front-on-desk-210990/
+https://www.pexels.com/photo/food-healthy-sea-beach-137110/
+https://www.pexels.com/photo/growth-leaves-notebook-pen-380810/
+https://www.pexels.com/photo/close-up-of-pictures-185933/
+https://www.pexels.com/photo/alone-freedom-man-person-488625/
+https://www.pexels.com/photo/restaurant-people-tables-chairs-528809/
+https://www.pexels.com/photo/full-length-of-a-man-487228/
+https://www.pexels.com/photo/man-in-black-jacket-and-carrying-red-backpack-486670/
+https://www.pexels.com/photo/food-healthy-sea-beach-137110/

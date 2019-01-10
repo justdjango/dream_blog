@@ -1,0 +1,15 @@
+---------------------
+ LICENSE CONDITIONS
+---------------------
+
+You are completely free to use this template for your personal use or as a work for your client as long as you keep the link at the template footer pointing to us and our partner. 
+
+If you would prefer removing the backlink from the theme footer, please purchase the attribution-free license at https://bootstraptemple.com. The price of the license is mere $10. Also, as a bonus for donors, I can provide you the SASS files for even easier template customization. Drop me a line at hello@bootstraptemple.com after donating. 
+
+However,  you cannot redistribute the template nor its derivatives on the internet - neither for free or commercially (e.g. selling it on template marketplace).
+
+Thank you for understanding and respecting the license conditions.
+
+If more info needed, contact me at hello@bootstraptemple.com.
+
+Note: I distribute this template also on my second site, Bootstrapious. License conditions are the same, you can donate on Bootstrap Temple or Bootstrapious. Thanks :)
