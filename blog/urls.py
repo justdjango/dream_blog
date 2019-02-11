@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from posts.views import index, blog, post, search
 
@@ -11,6 +11,7 @@ urlpatterns = [
     path('blog/', blog, name='post-list'),
     path('search/', search, name='search'),
     path('post/<id>/', post, name='post-detail'),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:

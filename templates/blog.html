@@ -48,64 +48,7 @@
             </nav>
           </div>
         </main>
-        <aside class="col-lg-4">
-          <!-- Widget [Search Bar Widget]-->
-          <div class="widget search">
-            <header>
-              <h3 class="h6">Search the blog</h3>
-            </header>
-            <form action="{% url 'search' %}" class="search-form">
-              <div class="form-group">
-                <input type="text" name="q" placeholder="What are you looking for?">
-                <button type="submit" class="submit"><i class="icon-search"></i></button>
-              </div>
-            </form>
-          </div>
-          <!-- Widget [Latest Posts Widget]        -->
-          <div class="widget latest-posts">
-            <header>
-              <h3 class="h6">Latest Posts</h3>
-            </header>
-            <div class="blog-posts">
-              {% for post in most_recent %}
-                <a href="{{ post.get_absolute_url }}">
-                  <div class="item d-flex align-items-center">
-                    <div class="image"><img src="{{ post.thumbnail.url }}" alt="..." class="img-fluid"></div>
-                    <div class="title"><strong>{{ post.title }}</strong>
-                      <div class="d-flex align-items-center">
-                        <div class="views"><i class="icon-eye"></i> {{ post.view_count }}</div>
-                        <div class="comments"><i class="icon-comment"></i>{{ post.comment_count }}</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              {% endfor %}
-          </div>
-          <!-- Widget [Categories Widget]-->
-          <div class="widget categories">
-            <header>
-              <h3 class="h6">Categories</h3>
-            </header>
-            {% for cat in category_count %}
-            <div class="item d-flex justify-content-between">
-              <a href="#">{{ cat.categories__title }}</a><span>{{ cat.categories__title__count }}</span>
-            </div>
-            {% endfor %}
-          </div>
-          <!-- Widget [Tags Cloud Widget]-->
-          <div class="widget tags">       
-            <header>
-              <h3 class="h6">Tags</h3>
-            </header>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="#" class="tag">#Business</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Technology</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Fashion</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Sports</a></li>
-              <li class="list-inline-item"><a href="#" class="tag">#Economy</a></li>
-            </ul>
-          </div>
-        </aside>
+        {% include 'sidebar.html' with most_recent=most_recent category_count=category_count %}
       </div>
     </div>
 
