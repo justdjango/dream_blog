@@ -45,7 +45,7 @@
                     <h2 class="h4">{{ obj.title }}</h2>
                     </a>
                 </header>
-                <p>{{ obj.overview }}</p>
+                <p>{{ obj.overview|linebreaks|truncatechars:200 }}</p>
                 <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
                     <div class="avatar"><img src="{{ obj.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
                     <div class="title"><span>{{ obj.author }}</span></div></a>
@@ -93,7 +93,7 @@
                   </div>
               </div><a href="#">
                 <h3 class="h4">{{ obj.title }}</h3></a>
-              <p class="text-muted">{{ obj.overview }}</p>
+              <p class="text-muted">{{ obj.overview|linebreaks|truncatechars:200 }}</p>
             </div>
           </div>
           {% endfor %}
