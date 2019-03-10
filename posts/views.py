@@ -3,7 +3,10 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .forms import CommentForm, PostForm
 from .models import Post, Author
+from marketing.forms import EmailSignupForm
 from marketing.models import Signup
+
+form = EmailSignupForm()
 
 
 def get_author(user):
@@ -47,9 +50,11 @@ def index(request):
 
     context = {
         'object_list': featured,
-        'latest': latest
+        'latest': latest,
+        'form': form
     }
     return render(request, 'index.html', context)
+
 
 def blog(request):
     category_count = get_category_count()
@@ -69,9 +74,11 @@ def blog(request):
         'queryset': paginated_queryset,
         'most_recent': most_recent,
         'page_request_var': page_request_var,
-        'category_count': category_count
+        'category_count': category_count,
+        'form': form
     }
     return render(request, 'blog.html', context)
+
 
 def post(request, id):
     category_count = get_category_count()
@@ -90,9 +97,11 @@ def post(request, id):
         'form': form,
         'post': post,
         'most_recent': most_recent,
-        'category_count': category_count
+        'category_count': category_count,
+        'form': form
     }
     return render(request, 'post.html', context)
+
 
 def post_create(request):
     title = 'Create'
@@ -111,12 +120,13 @@ def post_create(request):
     }
     return render(request, "post_create.html", context)
 
+
 def post_update(request, id):
     title = 'Update'
     post = get_object_or_404(Post, id=id)
     form = PostForm(
-        request.POST or None, 
-        request.FILES or None, 
+        request.POST or None,
+        request.FILES or None,
         instance=post)
     author = get_author(request.user)
     if request.method == "POST":
