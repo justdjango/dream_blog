@@ -2,15 +2,14 @@
   "schemaVersion": 2,
   "dockerfileLines": [
     "FROM python:3.6-alpine",
-    "WORKDIR /",
+    "WORKDIR ./",
     "RUN apk update && apk upgrade",
     "RUN apk add curl \"postgresql-dev\" \\",
     "                              \"zlib-dev\"",
     "RUN pip install --no-cache-dir virtualenv && \\",
     "    mkdir /virtualenv &&  \\",
     "    virtualenv /virtualenv",
-    "COPY ./requirements.txt /app/",
-    "RUN /virtualenv/bin/pip install -r requirements.txt",
-    "COPY . /app/"
+    "COPY . /app/",
+    "RUN /virtualenv/bin/pip install -r /app/requirements.txt"
   ]
 }
