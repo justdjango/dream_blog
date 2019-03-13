@@ -17,6 +17,6 @@
     "COPY . /app/",
     "RUN /virtualenv/bin/pip install -r /app/requirements.txt",
     "EXPOSE 80",
-    "CMD [\"python\", \"manage.py\", \"runserver\", \"0.0.0.0:80\"]"
+    "CMD [\"/virtualenv/bin/python\", \"manage.py\", \"runserver\", \"0.0.0.0:80\"]"
   ]
 }
