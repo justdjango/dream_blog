@@ -9,8 +9,8 @@
     "RUN pip install --no-cache-dir virtualenv && \\",
     "    mkdir /virtualenv &&  \\",
     "    virtualenv /virtualenv",
-    "COPY requirements.* /app/",
+    "COPY ./requirements.txt /app/",
     "RUN /virtualenv/bin/pip install -r requirements.txt",
-    "COPY . /src /app"
+    "COPY . /app/"
   ]
 }
