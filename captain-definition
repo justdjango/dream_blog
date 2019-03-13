@@ -1,4 +1,16 @@
 {
- "schemaVersion" :2 ,
- "templateId" :"python-django/3.6.5"
+  "schemaVersion": 1,
+  "dockerfileLines": [
+    "FROM python:3.6-alpine",
+    "WORKDIR /",
+    "RUN apk update && apk upgrade",
+    "RUN apk add curl \"postgresql-dev\" \\",
+    "                              \"zlib-dev\"",
+    "RUN pip install --no-cache-dir virtualenv && \\",
+    "    mkdir /virtualenv &&  \\",
+    "    virtualenv /virtualenv",
+    "COPY requirements.* /app/",
+    "RUN /virtualenv/bin/pip install -r requirements.txt",
+    "COPY . /src /app"
+  ]
 }
