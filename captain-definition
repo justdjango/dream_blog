@@ -17,6 +17,7 @@
     "COPY . /app/",
     "RUN /virtualenv/bin/pip install -r /app/requirements.txt",
     "EXPOSE 80",
+    "CMD [\"/virtualenv/bin/python\", \"manage.py\", \"collectstatic --no-input\"]",
     "CMD [\"/virtualenv/bin/python\", \"manage.py\", \"runserver\", \"0.0.0.0:80\"]"
   ]
 }
