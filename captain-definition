@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "dockerfileLines": [
     "FROM python:3.6-alpine",
-    "WORKDIR ./",
+    "WORKDIR /app",
     "RUN apk update && apk upgrade",
     "RUN apk add curl \"postgresql-dev\" \\",
     "                              \"zlib-dev\"",
