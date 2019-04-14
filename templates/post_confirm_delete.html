@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+      <div class="row">
+        <!-- Latest Posts -->
+        <main class="post blog-post col-lg-8"> 
+          <div class="container">
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+            <form method="post">
+                {% csrf_token %}
+                <input type="submit" value="Confirm">
+            </form>
+          </div>
+        </main>
+        {% include 'sidebar.html' with most_recent=most_recent category_count=category_count %}        
+      </div>
+    </div>
+{% endblock content %}

@@ -24,8 +24,8 @@
                     {% endfor %}
                   </div>
                   <div>
-                    <a href="{% url 'post-update' id=post.id %}">Update</a>
-                    <a href="{% url 'post-delete' id=post.id %}">Delete</a>
+                    <a href="{% url 'post-update' pk=post.pk %}">Update</a>
+                    <a href="{% url 'post-delete' pk=post.pk %}">Delete</a>
                   </div>
                 </div>
                 <h1>{{ post.title }}<a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
