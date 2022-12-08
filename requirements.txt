@@ -1,6 +1,6 @@
 astroid==2.1.0
 autopep8==1.4.3
-certifi==2019.3.9
+certifi==2022.12.7
 chardet==3.0.4
 defusedxml==0.5.0
 Django==2.2.13
